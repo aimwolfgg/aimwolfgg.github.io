@@ -19,7 +19,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="AimWolf — VPN для геймеров">
   <meta property="og:description" content="Brawl Stars · Discord · Fortnite — без блокировок. Скоро запуск.">
-  <meta property="og:image" content="assets/img/og-banner.png">
+  <meta property="og:image" content="https://aimwolfgg.github.io/assets/img/og-banner.png">
   <meta property="og:url" content="https://aimwolfgg.github.io">
   <meta property="og:locale" content="ru_RU">
   <meta name="twitter:card" content="summary_large_image">
@@ -80,16 +80,23 @@
         <p class="hero__subtitle">
           AimWolf — VPN для геймеров. Готовим к запуску.
         </p>
-        <a href="https://t.me/aimwolfgg"
-           class="btn btn--primary btn--large hero__cta"
-           target="_blank"
-           rel="noopener noreferrer">
-          Подписаться в Telegram
-          <span class="btn__arrow" aria-hidden="true">→</span>
-        </a>
-        <p class="hero__caption">
-          50 первых пользователей получат первый месяц бесплатно.
-        </p>
+        <div class="hero__ctas">
+          <a href="https://t.me/aimwolfgg"
+             class="btn btn--primary btn--large"
+             target="_blank"
+             rel="noopener noreferrer">
+            Подписаться в Telegram
+            <span class="btn__arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="#about" class="btn btn--ghost btn--large">
+            Что такое AimWolf
+            <span class="btn__arrow" aria-hidden="true">↓</span>
+          </a>
+        </div>
+        <div class="hero__fomo">
+          <span class="hero__fomo-icon" aria-hidden="true">🎁</span>
+          <span>Первый месяц бесплатно — для первых <strong>50</strong> пользователей</span>
+        </div>
       </div>
     </section>
 
@@ -279,6 +286,11 @@
   <!-- ============== FOOTER ============== -->
   <footer class="site-footer">
     <div class="container site-footer__inner">
+      <div class="site-footer__progress">
+        <span aria-hidden="true">🚀</span>
+        <span>Запуск через ~2 недели · следи в <a href="https://t.me/aimwolfgg" target="_blank" rel="noopener noreferrer">@aimwolfgg</a></span>
+      </div>
+
       <div class="site-footer__brand">
         <img src="assets/img/logo.jpg" alt="" class="site-footer__logo" width="32" height="32">
         <span>AimWolf — VPN для геймеров</span>
@@ -297,6 +309,14 @@
           По вопросам: пиши в бот.
         </li>
       </ul>
+
+      <button type="button"
+              class="site-footer__toggle"
+              id="motion-toggle"
+              aria-pressed="false"
+              aria-label="Переключить анимации сайта">
+        Анимации: вкл
+      </button>
 
       <p class="site-footer__legal">
         © 2026 AimWolf. Сайт работает в режиме prelaunch — продукта на продаже пока нет.
