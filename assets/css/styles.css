@@ -1085,6 +1085,28 @@ body::before {
   color: var(--text-dim);
   max-width: 600px;
   line-height: 1.6;
+  margin-top: -10px;
+}
+.site-footer__legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 6px 10px;
+  font-size: 11px;
+  font-weight: 400;
+  color: #4F5970;
+  letter-spacing: 0.02em;
+}
+.site-footer__legal-links a {
+  color: #5A6580;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+.site-footer__legal-links a:hover {
+  color: var(--text-muted);
+  text-decoration: underline;
 }
 
 /* ===== ACCESSIBILITY ===== */
