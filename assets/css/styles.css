@@ -496,6 +496,11 @@ body::before {
   padding-top: 16px;
   border-top: 1px solid var(--border);
 }
+/* Карточка-принцип состоит из одного блока — разделитель сверху не нужен. */
+.diff-row__good:first-child {
+  padding-top: 0;
+  border-top: none;
+}
 .diff-row__bad p,
 .diff-row__good p {
   font-size: 15px;
