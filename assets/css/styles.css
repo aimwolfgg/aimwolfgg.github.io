@@ -410,6 +410,31 @@ body::before {
   font-size: 15px;
   line-height: 1.55;
 }
+/* Карточка-ссылка: отдельный класс для тех, что ведут на гайды.
+   Не подчёркиваем, наследуем цвет, чтобы внутри выглядело как обычная карточка. */
+a.pain-card--link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.pain-card__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 18px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  transition: gap var(--transition), color var(--transition);
+}
+.pain-card__arrow {
+  transition: transform var(--transition);
+}
+.pain-card--link:hover .pain-card__more { gap: 10px; }
+.pain-card--link:hover .pain-card__arrow { transform: translateX(4px); }
 .pain__note {
   text-align: center;
   font-size: clamp(16px, 1.6vw, 19px);

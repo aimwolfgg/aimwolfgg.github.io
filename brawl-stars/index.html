@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0A1628">
+
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' data:; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; base-uri 'self'; form-action 'self';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- SEO -->
+  <title>Brawl Stars не открывается? Зависает на загрузке? Решение — AimWolf</title>
+  <meta name="description" content="Brawl Stars не запускается, висит на загрузке, не идут платежи за пропуск. Что проверить за 2 минуты и как стабильно играть через AimWolf. 2 дня бесплатно, без карты.">
+  <link rel="canonical" href="https://aimwolf.fun/brawl-stars/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Brawl Stars не открывается? Решение за 2 минуты — AimWolf">
+  <meta property="og:description" content="Бесконечная загрузка, не идут платежи за пропуск, не подключается к серверам — что проверить и как стабильно играть через AimWolf.">
+  <meta property="og:image" content="https://aimwolf.fun/assets/og/brawl-stars.jpg">
+  <meta property="og:url" content="https://aimwolf.fun/brawl-stars/">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" href="/assets/img/logo.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/game-page.css">
+
+  <!-- Структурированные данные: страница-гайд + FAQ для rich-snippets в Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Почему Brawl Stars не открывается и зависает на загрузке?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Чаще всего — нестабильный маршрут до серверов Supercell в Финляндии. Игра не может пройти первичный handshake с сервером, и зависает на бесконечной загрузке. AimWolf даёт прямой стабильный канал до европейских серверов и убирает обрывы."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Почему не идут платежи за Brawl Pass и кристаллы?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Платёж в Brawl Stars проходит через Google Play или App Store, которые маршрутизируют запрос в платёжный шлюз Supercell. Если на любом шаге канал нестабильный — платёж падает. Через AimWolf путь короче и стабильнее, оплата проходит."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Забанят ли мой аккаунт Brawl Stars за использование VPN?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Supercell не банит за сам факт VPN. Бан возможен за резкую смену IP посреди матча — поэтому правило: включай AimWolf до запуска игры и не выключай до выхода. Так подключение остаётся стабильным."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Будет ли пинг ниже, если играть через VPN?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Да, при условии что маршрут без VPN был нестабильным с потерями пакетов. AimWolf держит пинг 30-80 мс до европейских серверов, что для Brawl Stars комфортно (игра не требует супернизкого пинга, но требует стабильности)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Сколько стоит и можно ли попробовать бесплатно?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "2 дня бесплатно, без карты — заходишь в @aimwolfgg_bot, получаешь ключ. Если зашло — дальше от 99 ₽ за 10 дней. Если нет — ничего не платишь, просто не продлеваешь."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Работает ли AimWolf на iPhone и Android?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Да. На Android — клиент V2RayTun (бесплатный, в Google Play). На iPhone — Happ (бесплатный, в App Store). Бот в Telegram даёт пошаговую инструкцию под твою платформу — настройка занимает 2 минуты."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============== HEADER ============== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="/" class="site-header__brand" aria-label="AimWolf — на главную">
+        <img src="/assets/img/logo.jpg" alt="" class="site-header__logo" width="40" height="40">
+        <span class="site-header__name">AimWolf</span>
+      </a>
+      <a href="https://t.me/aimwolfgg"
+         class="btn btn--primary btn--small"
+         target="_blank"
+         rel="noopener noreferrer">
+        Telegram
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============== HERO ============== -->
+    <section class="game-hero">
+      <div class="container game-hero__inner">
+        <nav class="game-hero__crumbs" aria-label="Хлебные крошки">
+          <a href="/">Главная</a>
+          <span aria-hidden="true">›</span>
+          <a href="/#games">Игры</a>
+          <span aria-hidden="true">›</span>
+          <span>Brawl Stars</span>
+        </nav>
+
+        <div class="game-hero__head">
+          <img src="/assets/img/games/brawlstars.png" alt="" width="72" height="72" class="game-hero__icon">
+          <div>
+            <span class="section-tag">// BRAWL STARS</span>
+            <h1 class="game-hero__title">
+              Brawl Stars не открывается? Зависает на загрузке?
+              <span class="game-hero__title-accent">Решим за 2 минуты.</span>
+            </h1>
+          </div>
+        </div>
+
+        <p class="game-hero__lead">
+          Бесконечная загрузка после обновления, не идут платежи за Brawl Pass, друзья в клубе оффлайн — это не твой телефон и не твой роутер. Дело в маршруте до серверов. Объясняем что происходит и как починить.
+        </p>
+
+        <div class="game-hero__ctas">
+          <a href="https://t.me/aimwolfgg_bot"
+             class="btn btn--primary btn--large"
+             target="_blank"
+             rel="noopener noreferrer">
+            Запустить через AimWolf
+            <span class="btn__arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="#fix" class="btn btn--ghost btn--large">
+            Сначала проверить за 2 мин
+            <span class="btn__arrow" aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        <p class="game-hero__fomo">
+          <span aria-hidden="true">🎁</span>
+          <span>2 дня бесплатно — без карты. Просто получи ключ в боте.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============== БЫСТРЫЙ ТЕСТ ============== -->
+    <section class="guide-section" id="fix">
+      <div class="container">
+        <span class="section-tag">// БЫСТРЫЙ ТЕСТ</span>
+        <h2 class="section-title">
+          Проверь за 2 минуты —
+          <span class="section-title__accent">в таком порядке.</span>
+        </h2>
+
+        <ol class="guide-steps">
+          <li class="guide-step">
+            <span class="guide-step__num">1</span>
+            <div>
+              <h3 class="guide-step__title">Перезапусти игру и проверь другие приложения</h3>
+              <p>Полностью закрой Brawl Stars (свайп из недавних приложений) и открой заново. Параллельно — открой TikTok или YouTube. Если они тоже тормозят — проблема в твоём интернете, перезагрузи Wi-Fi роутер или переключись на мобильный интернет.</p>
+            </div>
+          </li>
+          <li class="guide-step">
+            <span class="guide-step__num">2</span>
+            <div>
+              <h3 class="guide-step__title">Проверь дату и время на телефоне</h3>
+              <p>Звучит глупо, но сбитая дата ломает шифрование при подключении к серверам. Зайди в Настройки → Дата и время → включи «автоматически». Это 10 секунд, и в 1 случае из 20 это всё, что нужно.</p>
+            </div>
+          </li>
+          <li class="guide-step">
+            <span class="guide-step__num">3</span>
+            <div>
+              <h3 class="guide-step__title">Запусти через AimWolf — 2 минуты, бесплатно</h3>
+              <p>Если первые два пункта не помогли — дело в маршруте до серверов Supercell. AimWolf даёт прямой стабильный канал до Европы. Открываешь бота <a href="https://t.me/aimwolfgg_bot" target="_blank" rel="noopener noreferrer">@aimwolfgg_bot</a>, получаешь ключ, ставишь V2RayTun (Android) или Happ (iPhone) — игра запускается.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============== ПОЧЕМУ ============== -->
+    <section class="guide-section guide-section--alt">
+      <div class="container">
+        <span class="section-tag">// ПОЧЕМУ ТАК</span>
+        <h2 class="section-title">
+          Почему Brawl Stars тормозит у одних,
+          <span class="section-title__accent">а у других нет.</span>
+        </h2>
+
+        <div class="guide-why">
+          <div class="guide-why__card">
+            <h3>География серверов</h3>
+            <p>Серверы Supercell стоят в Финляндии и Ирландии. От Москвы до них трафик идёт через 8-12 промежуточных узлов разных операторов. Если хоть один узел перегружен — пакеты теряются, игра уходит в бесконечную загрузку.</p>
+          </div>
+          <div class="guide-why__card">
+            <h3>Нестабильный маршрут</h3>
+            <p>У домашнего и мобильного провайдеров маршрут до Финляндии может меняться каждые несколько минут. Это нормально для просмотра видео — там работает буферизация. Для мультиплеерной игры — катастрофа: одна потеря пакета, и тебя выкидывает.</p>
+          </div>
+          <div class="guide-why__card">
+            <h3>Платёжный шлюз тоже за рубежом</h3>
+            <p>Платежи за Brawl Pass и кристаллы проходят через Google Play или App Store, и дальше — в платёжный шлюз Supercell. Если по дороге хоть один шаг отвалился, платёж падает с ошибкой «попробуйте позже» — а деньги могут списаться или нет, как повезёт.</p>
+          </div>
+          <div class="guide-why__card">
+            <h3>Что даёт AimWolf</h3>
+            <p>Один прямой канал до европейских серверов вместо случайного маршрута. Пинг 30-80 мс, стабильный без обрывов. Игра подключается с первого раза, платежи проходят, друзья в клубе видны онлайн.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== КАК НАСТРОИТЬ ============== -->
+    <section class="guide-section" id="setup">
+      <div class="container">
+        <span class="section-tag">// НАСТРОЙКА</span>
+        <h2 class="section-title">
+          Как настроить за
+          <span class="section-title__accent">2 минуты.</span>
+        </h2>
+        <p class="guide-lead">
+          Без удаления игры, без переустановки винды, без танцев с DNS. Просто получаешь ключ в боте и подключаешь — игра сразу заходит.
+        </p>
+
+        <div class="guide-howto">
+          <article class="guide-howto__card">
+            <h3 class="guide-howto__title">📱 Android</h3>
+            <ol class="guide-howto__list">
+              <li>Открой бота <a href="https://t.me/aimwolfgg_bot" target="_blank" rel="noopener noreferrer">@aimwolfgg_bot</a> в Telegram и нажми <strong>/start</strong>.</li>
+              <li>Тапни «🔑 Получить ключ» — бот пришлёт твою персональную ссылку-подписку.</li>
+              <li>Поставь приложение <strong>V2RayTun</strong> из Google Play (бесплатное).</li>
+              <li>Вернись в бота и тапни «Открыть в V2RayTun» — подписка добавится автоматически.</li>
+              <li>Включи переключатель в V2RayTun → запускай Brawl Stars.</li>
+            </ol>
+          </article>
+
+          <article class="guide-howto__card">
+            <h3 class="guide-howto__title">🍏 iPhone / iPad</h3>
+            <ol class="guide-howto__list">
+              <li>Открой бота <a href="https://t.me/aimwolfgg_bot" target="_blank" rel="noopener noreferrer">@aimwolfgg_bot</a> в Telegram и нажми <strong>/start</strong>.</li>
+              <li>Тапни «🔑 Получить ключ» — скопируй ссылку (моноширинный шрифт, тап копирует).</li>
+              <li>Поставь приложение <strong>Happ</strong> из App Store (бесплатное).</li>
+              <li>Открой Happ — оно само предложит добавить ссылку из буфера обмена. Нажми «Да».</li>
+              <li>Включи в Happ переключатель → запускай Brawl Stars.</li>
+            </ol>
+          </article>
+        </div>
+
+        <p class="guide-note">
+          Подключился один раз — дальше игра помнит ключ и запускается сама. Когда захочешь играть — просто включай VPN в одно касание.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============== FAQ ============== -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <span class="section-tag">// ВОПРОСЫ</span>
+        <h2 class="section-title">
+          Brawl Stars и
+          <span class="section-title__accent">AimWolf — FAQ</span>
+        </h2>
+
+        <div class="faq__list">
+
+          <details class="faq-item">
+            <summary class="faq-item__q">
+              <span>Забанят ли мой аккаунт Brawl Stars за VPN?</span>
+              <span class="faq-item__chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__a">
+              <p>
+                Supercell не банит за сам факт VPN. Бан возможен только за <strong>резкую смену IP посреди матча</strong> — поэтому правило простое: включил AimWolf до запуска игры, не выключал до выхода. Так подключение стабильное, аккаунт в безопасности.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-item__q">
+              <span>Будут ли проходить платежи за Brawl Pass и кристаллы?</span>
+              <span class="faq-item__chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__a">
+              <p>
+                Да, при условии что в Google Play / App Store привязан рабочий способ оплаты. AimWolf делает стабильным <strong>канал между телефоном и серверами Supercell</strong> — то есть платёжный запрос доходит без обрыва. Сам платёж дальше проходит как обычно.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-item__q">
+              <span>Пинг будет ниже, чем без VPN?</span>
+              <span class="faq-item__chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__a">
+              <p>
+                Если без VPN был нестабильный маршрут с потерями — <strong>да, пинг станет ниже и стабильнее</strong>. AimWolf держит 30-80 мс до европейских серверов. Если у тебя и так был хороший маршрут — большой разницы не заметишь, но Brawl Stars всё равно перестанет «вылетать» в загрузку.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-item__q">
+              <span>Можно ли играть с друзьями в одном клубе через VPN?</span>
+              <span class="faq-item__chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__a">
+              <p>
+                Да. У всех в клубе свой ключ AimWolf, серверы видят разные IP — никаких ограничений на совместную игру или общение в клубе нет. Можешь даже <strong>дать ключ другу</strong>: один аккаунт = до 5 устройств.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-item__q">
+              <span>А если интернет и так нормальный — нужен ли мне VPN?</span>
+              <span class="faq-item__chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__a">
+              <p>
+                Если Brawl Stars у тебя стабильно открывается, платежи проходят и пинг комфортный — VPN не нужен. AimWolf нужен тем, у кого <strong>игра зависает на загрузке, выкидывает в матче, не идут платежи, не видны друзья в клубе</strong>. Если ничего из этого нет — не плати, просто играй.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-item__q">
+              <span>Сколько стоит AimWolf?</span>
+              <span class="faq-item__chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__a">
+              <p>
+                <strong>2 дня бесплатно</strong> для всех, без карты. Дальше: 10 дней — 99 ₽, месяц — 249 ₽, 3 месяца — 599 ₽, полгода — 1090 ₽, год — 1990 ₽. Оплата российской картой, СБП, ЮMoney или Telegram Stars (для тех, у кого нет банковской карты).
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-item__q">
+              <span>А если не подойдёт?</span>
+              <span class="faq-item__chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__a">
+              <p>
+                Сначала 2 дня триала — поймёшь, помогает ли. Если уже купил подписку — <strong>возврат в течение 24 часов</strong>, пиши в бота. Не зашло — без вопросов вернём.
+              </p>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== CTA ============== -->
+    <section class="status">
+      <div class="container status__inner">
+        <span class="section-tag">// ПОЕХАЛИ</span>
+        <h2 class="section-title">Brawl Stars — запускай через AimWolf</h2>
+        <p class="status__lead">
+          Получи ключ в боте за минуту. 2 дня бесплатно, без карты. Не зайдёт — ничего не платишь.
+        </p>
+
+        <a href="https://t.me/aimwolfgg_bot"
+           class="btn btn--primary btn--large btn--pulse"
+           target="_blank"
+           rel="noopener noreferrer">
+          Запустить Brawl Stars через AimWolf
+          <span class="btn__arrow" aria-hidden="true">→</span>
+        </a>
+
+        <p class="game-related">
+          <strong>Похожие гайды:</strong>
+          <a href="/discord/">Discord</a> ·
+          <a href="/#games">Все игры</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__progress">
+        <span aria-hidden="true">🚀</span>
+        <span>Уже работает · новости и промокоды в <a href="https://t.me/aimwolfgg" target="_blank" rel="noopener noreferrer">@aimwolfgg</a></span>
+      </div>
+
+      <div class="site-footer__brand">
+        <img src="/assets/img/logo.jpg" alt="" class="site-footer__logo" width="32" height="32">
+        <span>AimWolf — VPN для геймеров</span>
+      </div>
+
+      <ul class="site-footer__links">
+        <li>Telegram-канал: <a href="https://t.me/aimwolfgg" target="_blank" rel="noopener noreferrer">@aimwolfgg</a></li>
+        <li>Бот: <a href="https://t.me/aimwolfgg_bot" target="_blank" rel="noopener noreferrer">@aimwolfgg_bot</a></li>
+        <li>По вопросам: пиши в бот.</li>
+      </ul>
+
+      <nav class="site-footer__legal-links" aria-label="Юридические документы">
+        <a href="/privacy.html">Политика конфиденциальности</a>
+        <span aria-hidden="true">·</span>
+        <a href="/offer.html">Публичная оферта</a>
+        <span aria-hidden="true">·</span>
+        <a href="/refund.html">Политика возврата</a>
+      </nav>
+
+      <p class="site-footer__legal">
+        © 2026 AimWolf — VPN для геймеров.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
